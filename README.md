@@ -24,3 +24,33 @@ MongoDB **6.0 or newer** is required (the grader uses 7.0). MongoDB Atlas free t
 ## Submit
 A public Git repository with `app/main.py`, `requirements.txt`, `REVIEW.md`, `DECISIONS.md` and a short `README.md`.
 No `.env`, no secrets, no Dockerfile.
+
+# HROne Attendance & Analytics API
+
+A REST API built with Python, FastAPI, and MongoDB to manage employee attendance, punch-in/punch-out records, attendance corrections, and analytics.
+
+## Features
+- Employee creation and listing
+- Attendance punch-in and punch-out with business-rule validation
+- Attendance record retrieval and corrections with audit history
+- Monthly employee attendance analytics
+- Department summaries and late-arrival leaderboard
+- Department trends and MongoDB query-plan inspection
+
+## Setup
+1. Install dependencies:
+   `pip install -r requirements.txt`
+2. Configure `MONGO_URI` and `MONGO_DB` in your local `.env` file.
+3. Start the API:
+   `uvicorn app.main:app --port 8000`
+
+## API Documentation
+After starting the server, visit `/docs` for interactive Swagger documentation.
+
+## Testing
+Run:
+`python -m pytest tests/ -v`
+
+## Configuration
+Keep `.env` and all database credentials private. Do not commit secrets to GitHub.
+
